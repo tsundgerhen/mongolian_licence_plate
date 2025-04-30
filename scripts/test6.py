@@ -85,7 +85,7 @@ for index, row in df.iterrows():
     image_upscaled = cv2.resize(image_enhanced, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
 
     # Predict characters
-    results = char_model(image_upscaled, conf=0.32)
+    results = char_model(image_upscaled, conf=0.4)
     chars = []
     for r in results:
         for box in r.boxes:
